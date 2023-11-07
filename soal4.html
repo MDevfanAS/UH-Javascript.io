@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Login</title>
+</head>
+<body>
+
+<h1>Form Login</h1>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="button" value="Login" onclick="cekLogin()">
+</form>
+
+<p id="hasilLogin"></p>
+
+<script>
+function cekLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "stematel" && password === "2023") {
+        document.getElementById("hasilLogin").textContent = "Selamat anda berhasil login";
+    } else {
+        document.getElementById("hasilLogin").textContent = "Maaf anda gagal login";
+    }
+}
+</script>
+
+</body>
+</html>

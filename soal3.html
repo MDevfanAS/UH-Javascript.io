@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Luas Segitiga</title>
+</head>
+<body>
+
+<h1>Kalkulator Luas Segitiga</h1>
+
+<form>
+    <label for="alas">Alas:</label>
+    <input type="number" id="alas" name="alas" required><br><br>
+
+    <label for="tinggi">Tinggi:</label>
+    <input type="number" id="tinggi" name="tinggi" required><br><br>
+
+    <input type="button" value="Hitung Luas" onclick="hitungLuas()">
+</form>
+
+<p>Luas Segitiga: <span id="luas"></span></p>
+
+<script>
+    
+function hitungLuas() {
+    var alas = parseFloat(document.getElementById("alas").value);
+    var tinggi = parseFloat(document.getElementById("tinggi").value);
+    var luas = 0.5 * alas * tinggi;
+
+    document.getElementById("luas").textContent = luas;
+}
+</script>
+
+</body>
+</html>

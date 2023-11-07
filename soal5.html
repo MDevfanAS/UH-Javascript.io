@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operasi Aritmetika</title>
+</head>
+<body>
+
+<h1>Operasi Aritmetika</h1>
+
+<form>
+    <label for="angka1">Angka 1:</label>
+    <input type="number" id="angka1" required><br><br>
+
+    <label for="angka2">Angka 2:</label>
+    <input type="number" id="angka2" required><br><br>
+
+    <input type="button" value="Hitung" onclick="hitung()">
+</form>
+
+<p>Hasil Pertambahan: <span id="hasilTambah"></span></p>
+<p>Hasil Perkalian: <span id="hasilKali"></span></p>
+<p>Hasil Pembagian: <span id="hasilBagi"></span></p>
+<p>Hasil Pengurangan: <span id="hasilKurang"></span></p>
+<p>Hasil Pangkat: <span id="hasilPangkat"></span></p>
+<p>Hasil Modulus: <span id="hasilModulus"></span></p>
+
+<script>
+function hitung() {
+    var angka1 = parseFloat(document.getElementById("angka1").value);
+    var angka2 = parseFloat(document.getElementById("angka2").value);
+
+    var hasilTambah = angka1 + angka2;
+    var hasilKali = angka1 * angka2;
+    var hasilBagi = angka1 / angka2;
+    var hasilKurang = angka1 - angka2;
+    var hasilPangkat = Math.pow(angka1, angka2);
+    var hasilModulus = angka1 % angka2;
+
+    document.getElementById("hasilTambah").textContent = hasilTambah;
+    document.getElementById("hasilKali").textContent = hasilKali;
+    document.getElementById("hasilBagi").textContent = hasilBagi;
+    document.getElementById("hasilKurang").textContent = hasilKurang;
+    document.getElementById("hasilPangkat").textContent = hasilPangkat;
+    document.getElementById("hasilModulus").textContent = hasilModulus;
+}
+</script>
+
+</body>
+</html>

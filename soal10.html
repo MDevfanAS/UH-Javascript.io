@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deteksi Tahun Bukan Tahun Kabisat</title>
+</head>
+<body>
+    <h1>Deteksi Tahun Bukan Tahun Kabisat</h1>
+    
+    <input type="text" id="tahun" placeholder="Masukkan tahun">
+    <button onclick="deteksiTahun()">Cek</button>
+    <p id="hasil"></p>
+    
+    <script>
+        function deteksiTahun() {
+            var inputTahun = document.getElementById("tahun").value;
+            var tahun = parseInt(inputTahun);
+            
+            if (isNaN(tahun)) {
+                document.getElementById("hasil").innerHTML = "Masukkan tahun yang valid.";
+            } else {
+                if (tahun % 4 !== 0) {
+                    document.getElementById("hasil").innerHTML = tahun + " adalah bukan tahun kabisat.";
+                } else {
+                    document.getElementById("hasil").innerHTML = tahun + " adalah tahun kabisat.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
